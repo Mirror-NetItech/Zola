@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Play It Yourself</title>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin-top:5px;
+      padding: 0;
+      width:98%;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    button {
+      font-family: sans-serif;
+      border-radius: 100px 30px;
+      padding: 15px 30px;
+      font-size: 120%;
+      
+      margin: 10px;
+      -webkit-transition-duration: 1s; /* for Safari */
+      transition-duration: 1s;
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+       z-index: 5;
+    }
+    #button1 {
+      background-color: rgba(1, 200, 20, 0.5);
+      color: white;
+      box-shadow: 0px 5px 10px 0px rgba(108, 18, 219, 0.8);
+      z-index: 2;
+      font-size: 120%;
+    }
+  
+    #button1:hover {
+      background-color: #f8bbf9;
+      color: rgb(23, 152, 89);
+      box-shadow: 10px 1px 2px 3px rgba(0,100,180,0.5);
+      cursor: pointer;
+    }
+  
+    .image-container {
+      margin: 0 auto; /* center the image containers */
+      width: 25%;
+      height: 25%;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(0,0,0,0.22); /* material box shadow */
+      margin-bottom: 20px;
+      transition-duration: 1s;
+      max-height: 25%;
+    }
+    .image-container:hover {
+      width: 10%;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+    }
+    /* make the images responsive */
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .image-description {
+      padding: 0 15px 15px 15px;
+      text-align: center;
+      font-size: 130%;
+      font-weight: bold; 
+    }
+    
+    /* lightbox stylesheet */
+    .lightbox {
+      display: table; /* helps us center the lightbox-content */
+      transition-duration: 1s; /* duration of the fade in effect */
+    
+      /* make the lightbox occupy the entire page */
+      position: fixed;
+      top: -100%; /* hide the lightbox above the top edge */
+      left: 0;
+      width: 100%;
+      height: 90%;
+      background: rgba(0, 0, 0, 0.7); /* black with 0.7 opacity */
+    }
+    .lightbox:target {
+      top: 0; /* make the lightbox cover the entire page */
+    }
+    .lightbox-content {
+      display: table-cell;
+      vertical-align: middle; /* vertically center */
+      text-align: center; /* horizontally center */
+    }
+    .close {
+      /* position the CLOSE button to the top-right corner */
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    
+      /* style the close button */
+      font-size: 250%;
+      font-weight: bolder;
+      text-decoration: none;
+      color: white;
+    }
+    
+    /* make the image responsive */
+    .lightbox img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <p style="font-size: 110%; font-weight: bold">
+  Alright, so let's take for instance you're given the the below web page to design or you want to design a web page like the below but in our case here we're only going to make use of only the tags we talked about previously except the <b style="color: lawngreen">&lt;pre&gt;</b>...<b style="color: lawngreen">&lt;/pre&gt;</b>, that means we're not going to make use of any CSS in our codes.</p>
+   <div class="gallery">
+  
+     <div class="image-container" id="container4">
+      <a href="#image4"><img src="egimg.jpg"></a>
+    </div>
+      <p class="image-description"> Click On or Hover Over  The Image Above To Have A Full View Of The Image</p>
+  
+  </div>
+  
+  
+  <div class="lightbox" id="image4">
+    <a href="#container4" class="close">CLOSE</a>
+    <div class="lightbox-content">
+      <img src="egimg.jpg" >
+    </div>
+  </div>
+  <div>
+    <p style="font-size: 110%; font-weight: bold">Alright so now let's design the above image's contents on a Web page using the following elements
+    <b style="color: lawngreen">&lt;p&gt;</b>...<b style="color: lawngreen">&lt;/p&gt;</b>
+    <b style="color: lawngreen">&lt;br&gt;</b>
+    <b style="color: lawngreen">&lt;hr&gt;</b> and the headings tags.
+    </p>
+    <p style="text-align: center; font-size: 120%; color: limegreen">Click the Button below <br> to take you to the Work space</p>
+<a href="Workspace.html">
+<button id="button1"> Button </button>
+</a>
+  </div>
+</body>
+</html>
