@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="max-age=36000, must-revalidate">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">  
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+	<title> Advance Web Design Essentials</title>
+	<link rel="stylesheet" href="123Web.css">
+	<style>
+	/*Below is the repeated colors*/
+	.tags{
+	  color: lawngreen;
+	  font-size: 110%;
+	  font-weight: bold;
+	}
+	li{
+	  font-size: 105%;
+	}
+	   ul{
+      list-style: none;
+      
+    }
+    button {
+      font-family: sans-serif;
+      border-radius: 100px 30px;
+      padding: 15px 30px;
+      font-size: 105%;
+      
+      margin: 10px;
+      -webkit-transition-duration: 1s; /* for Safari */
+      transition-duration: 1s;
+       margin-left: auto;
+       margin-right: auto;
+       display: block;
+       z-index: 5;
+    }
+    #button1 {
+      background-color: rgba(50, 12, 200, 0.5);
+      color: lawngreen;
+      box-shadow: 0px 4px 10px 0px rgba(200, 18, 119, 0.8);
+      z-index: 2;
+    }
+  
+    #button1:hover {
+      background-color: #f8f9f9;
+      color: rgb(23, 52, 89);
+      box-shadow: 1px 1px 2px 3px rgba(0,50,0,0.22);
+      cursor: pointer;
+    }
+  
+    li::before{
+      content: "€->";
+      color: gold;
+      font-size: 140%;
+      font-weight: bolder;
+    }
+    .il::before{
+      content: "-¥-";
+      color: gold;
+      font-size: 140%;
+      font-weight: bolder;
+    }
+   @media (max-width: 768px) {
+     /* Styles applied when the screen width is 768px or less */
+   }
+      @media (min-resolution: 300dpi) {
+     /* Styles applied when the screen resolution is 300dpi or higher */
+   }
+   
+      @media (max-width: 768px) and (orientation: portrait) {
+     /* Styles applied when the screen width is 768px or less and the device is in portrait orientation */
+   }
+
+#video-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  position: relative;
+}
+   .hov:hover {
+      width: 100%;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+      border-radius: 12px;
+    }
+
+
+#video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.popup {
+  width:300px;
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  
+  background: linear-gradient(to bottom right, rgba(25, 255, 255, 0.3), rgba(155, 105, 255, 0.3));
+  backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(225, 105, 25, 0.02);
+
+}
+
+.popup.show {
+  display: block;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  
+  to {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    color: #00ffff;
+  }
+  50% {
+    color: #ff00ff;
+  }
+  80%{
+    color: #000;
+  }
+  100% {
+    color: #ffff0e;
+  }
+}
+	</style>
+</head>
+<body>
+
+
+
+      <div class="app">
+        
+          <div class="me">
+  <h1 contenteditable="true" class="we"> 
+</h1>
+</div>
+
+  	  <div class="container">
+
+    
+
+
+		    <div class="chat">
+		
+		    	<div class="chat-header">
+
+				    <div class="profile">
+
+					<div class="left">
+						<img src="logo.jpg" class="pp">
+			<h1 class="logoname">M <sup> irro</sup><sub>R</sub>  <br>   N<sup>etwor</sup><sub>K</sub></h1>
+					</div>
+				</div>
+			</div>
+			<div class="chat-box">
+				<div class="chat-r">
+				
+				    <div class="des">
+				        <hr color="white" size="2">
+              <div id="progressbar"></div>
+<div id="scrollpath"></div>
+<section class="sec">
+        <div class="do">
+<div id="popup" class="popup" >
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h1>Hello IT Learner!</h1>
+    <h1>Welcome To The  </h1>
+    <h1 style="animation: blink 1s infinite;"><i> M<sub>irror</sub> N<sub>etwork</sub> ITech Platform</i></h1>
+    <p><h5>Thank you for visiting our website.</h5></p>
+    <p><h5>Enjoy your lesson.</h5></p>
+  </div>
+          <section id="Online" style="width: 100%; height: 100%;
+  box-shadow: 0 7px 6px 0 rgba(105, 200, 139, 0.4), 0 6px 20px 0 rgba(0, 213, 0, 0.5);
+  justify-content: center;
+  justify-items: center;
+  padding-left: 5.5px;
+  padding-right: 10px;
+  padding-top: 20px;
+  border-radius: 30px 65px 65px 30px;">
+            
+  <fieldset style="display: block;
+  margin-left: 2px;
+  margin-right: 4px;
+  background:gray ;
+  border-radius: 30px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border: 10px groove (internal value);
+  z-index: 3; box-shadow: 5px 8px 10px rgba(24, 13, 227, .8)">
+    <legend><span><b class="leg"> Better Introduction To HTML Fundamentals.</b></span></legend>
+    <img src="logoo.jpg" alt="" class="on">
+    <p style="margin-bottom: 0; padding-bottom: 0; margin-top: 0 " class="brif">*Alright, Let's better understand what the HTML fundamentals really entails.
+    <br>
+    So when we talk about HTML fundamentals, they include the popular technologies such as, HTML headings, HTML paragraph, HTML links and HTML images that are use for creating web pages.
+    <br> 
+    So let's now understand each of them into details.
+        <p style="margin-top: 0; " class="mainbrif">
+           <ul id="ul-circle">
+              <li><b class="points">*HTML Headings* :</b> They are use for titles or subtitles that you want to display on a webpage. The headings are defined with the <b class="tags">&lt;h1&gt;</b> to <b class="tags">&lt;h6&gt;</b> tags.The <b class="tags">&lt;h1&gt;</b> defines the most important heading. <b class="tags">&lt;h6&gt;</b> defines the least important heading.<br>
+              <b style="color: blue; font-size: 120%;">Eg :</b>
+              <h1 style="margin-top: 0; margin-bottom: 0; font-size: 140%; font-weight: bolder"> main headings uses h1</h1>
+           <h2 style="margin-top: 0; margin-bottom: 0; font-size: 128%; font-weight: bold">sub heading uses h2</h2>
+           <h3 style="margin-top: 0; margin-bottom: 0">sub heading uses h3</h3>
+           <h4 style="margin-top: 0; margin-bottom: 0">sub heading uses h4</h4>
+          <h5 style="margin-top: 0; margin-bottom: 0">sub heading uses h5</h5>
+           <h6 style="margin-top: 0; margin-bottom: 5px">sub heading uses h6</h6>
+            
+              <b style="color: antiquewhite; font-size: 123%;">What are the importance of using HTML headings:</b> Search engines use the headings to index the structure and content of your web pages. <br>
+Users often skim a page by its headings. <br>
+It is important to use headings to show the document structure. <br>
+
+<b class="tags">&lt;h1&gt;</b> headings should be used for main headings, followed by <b class="tags">&lt;h2&gt;</b> headings, then the less important <b class="tags">&lt;h3&gt;</b>, and so on. <br>
+<b class="note">Note: </b> Use HTML headings for headings only. Don't use headings to make text <b style="font-size: 122%; color: black; font-weight: bolder">BIG</b> or <b style="font-size: 122%; color: black; font-weight: bolder">bold</b>.
+<br>
+Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</li>
+          <li><b class="points">*HTML Paragraphs* :</b>They are mainly use for grouping sentences.<br>
+          They always starts on a new line, and is usually a block of text.
+          <br>
+          The HTML <b class="tags">&lt;p&gt;</b> element defines a paragraph.
+
+A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.
+<br>
+<b class="eg">Eg :</b>
+<p style="margin-top: 0; margin-bottom: 0">This is a paragraph.</p>
+<p style="margin-top: 0; margin-bottom: 5px">This is another paragraph.</p>
+<b class="note">Note :</b>You cannot be sure how HTML will be displayed. <br>
+Large or small screens, and resized windows will create different results. <br>
+With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code. <br>
+The browser will automatically remove any extra spaces and lines when the page is displayed:
+<br>
+<b class="eg">Eg :</b>
+<pre><b class="tags">&lt;p&gt;</b>This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+<b class="tags">&lt;/p&gt;</b>
+</pre>
+<pre><b class="tags">&lt;p&gt;</b>
+This paragraph
+contains   a lot of spaces
+in the source    code,
+but the   browser
+ignores.  it.
+<b class="tags">&lt;/p&gt;</b>
+</pre>
+<b style="color: antiquewhite; font-size: 123%;">Let's see all their out put</b>
+<p>
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+</p>
+
+<p>
+This paragraph
+contains         a lot of spaces
+in the source         code,
+but the        browser
+ignores it.
+</p>
+<b class="note">Note :</b> Alright, so talking about HTML paragraphs the <b class="tags">&lt;p&gt;</b>
+tag is not the only tag use in paragraphs.
+<br> Let's take for instance in your textbooks when you take a critical look at sentences you will see that there's some modifications such as break of lines, pre-formatted text that's  in the case of poem and songs, some parts of the sentences being underlined and etc made to them.
+<br>
+
+<fieldset id="relevant">
+  <legend><span class="relevant">So let's now check these tags out.</span></legend>
+  <ul style="margin-left: 10px">
+    <li class="il"><b class="subhead">HTML Line Breaks :</b>
+    <p>This element is use to create a link break in html paragraph.
+     Use the <b class="tags">&lt;br&gt;</b> tag if you want a line break (a new line) without starting a new paragraph. <br>
+     Let's notes that the <b class="tags">&lt;br&gt;</b> tag is an empty tag, which means that it has no end tag. Let's  check an example on it. </p> 
+     <b class="eg">Eg :</b> <p>This is<br>a paragraph<br>with line breaks. <br>
+     As you can see we can put the above sentence in one line but because we used line breaks ( <b class="tags">&lt;br&gt;</b> ) in it so it has been cut.</p>
+     
+    </li>
+    <li class="il"> <b class="subhead">HTML Horizontal Rule :</b> <p> Is an Html tag use for creating a horizontal line. This is also called Horizontal Rule in HTML. <br>
+The <b class="tags">&lt;hr&gt;</b> tag defines a thematic break in an HTML page ( <b class="eg">Eg:</b> a shift of topic).
+It is also used to separate contents (or define a change) in an HTML page. <br>
+Sine it is an empty tag so it does not have an end tag. Let's check an example out:
+<br> <b class="eg">Eg:</b><h1 style="font-size: 140%; font-weight: bolder; color: violet">This is heading 1</h1>
+<p style="color: violet">This is some text.</p>
+<hr width="100px">
+<h2 style="font-size: 128%; color: violet">This is heading 2</h2>
+<p style="color: violet">This is some other text.</p>
+<hr width="100px"></p></li>
+<li class="il"><b class="subhead"> HTML <b class="tags">&lt;pre&gt;</b> Element :</b> <p>The HTML <b class="tags">&lt;pre&gt;</b> element defines preformatted text.
+<br>
+The text inside a <b class="tags">&lt;pre&gt;</b> ....<b class="tags">&lt;/pre&gt;</b> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks.
+<br> Let's take for instance you're designing a Poetry web page, so meaning on your web page it will contains only poems. <br> 
+And already you knew poems are being written in stanzas, so how can we make sure the browser outputs the the right Forms and Structures of the poem. <br> 
+And over here we're still talking about creating paragraphs on a web page and when you take the right meaning of paragraph Therefore ( paragraph is one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line.
+<!-- I will talk about the paragraph later in the audio --> ) 
+with this meaning someone will be like then i will use the paragraph <b class="tags">&lt;p&gt;</b> tag, so let's take into account the opinion of that person by using <b class="tags">&lt;p&gt;</b> and see : <br>
+<b style="color: antiquewhite; font-size: 115%">Let's design this poem using the paragraph tag:  </b> <br> " ONCE UPON A TIME "
+<pre style="color: violet; font-size: 80%"><b class="tags">&lt;p&gt;</b>
+Once upon a time, son,
+they used to laugh with their hearts
+and laugh with their eyes:
+<b class="tags">&lt;/p&gt;</b>
+</pre>
+<b style="color: antiquewhite; font-size: 115%"> Let's check how the browser will output the poem using the paragraph tag :</b>
+<p style="color: violet; font-size: 80%">
+  Once upon a time, son,
+they used to laugh with their hearts
+and laugh with their eyes:
+</p>
+as you can see the <b class="tags">&lt;p&gt;</b> didn't put the poem in stanzas as we wanted. <br>
+So how can we resolve this? the solution here is we need to use the <b class="tags">&lt;pre&gt;</b>.... <b class="tags"> &lt;/pre&gt;</b> tag.
+<b style="color: antiquewhite; font-size: 115%">Let's see how the browser will output the poem using the <b class="tags">&lt;pre&gt;</b> tag</b> Alright but before we use the <b class="tags">&lt;pre&gt;</b>...<b class="tags">&lt;/pre&gt;</b> you need to put each stanza on a new line and where there's space you make sure you put space there. So now let's check it out.
+<pre style="color: violet; margin-bottom: 5px; font-size: 80%">Once upon a time, son,
+they used to laugh with their hearts
+and laugh with their eyes:
+</pre>
+As you can see here the browser output the poem in stanzas.
+</p></li>
+  </ul>
+</fieldset>
+Alright so let's  now check out an example on how all the above elements we mentioned above can be use in your every day activities and in our case here.
+And also make sure you come back to this page, that's the home page again to continue with the lesson.
+<br> <p style="text-align: center; font-size: 115%; color: deepskyblue">Click the Button below <br> to take you to the Work space</p>
+<a href="image.html">
+<button id="button1"> Button </button>
+</a>
+Alright, welcome back to continue with the lesson. In this continuation we're going to talk about the Image tag and the Link tag.
+</li>
+<li><b class="points">*HTML Image* :</b> The HTML image uses <b class="tags">&lt;img&gt;</b> tag, this tag is used to embed an image in a web page.
+Images can improve the design and the appearance of a web page.
+
+Images are not technically inserted into a web page; images are linked to web pages. The <b class="tags">&lt;img&gt;</b> tag creates a holding space for the referenced image.
+
+The <b class="tags">&lt;img&gt;</b> tag is an empty tag, it contains attributes only, and does not have a closing tag.
+
+The <b class="tags">&lt;img&gt;</b> tag has two required attributes:
+<b class="eg">These include :</b> <br>
+<b class="tags">src</b> - Specifies the path to the image <br>
+<b class="tags">alt</b> - Specifies an alternate text for the image <br>
+<b class="note">Syntax</b><br>
+<b style="color: violet; font-size: 101%">&lt;img src="url" alt="alternatetext"&gt;</b>
+<fieldset id="relevant">
+  <legend><span class="relevant">Let's see what actually the image attributes are. </span></legend>
+  <ul style="margin-left: 10px">
+    <li class="il"><b class="subhead">The src Attribute :</b> The required src attribute specifies the path (URL) to the image. <br>
+    <b class="note">Note:</b> When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. <br>
+    Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.
+    <br>
+   <b class="eg">Eg</b><b class="tags"> &lt;img src="img_chania.jpg" alt="Flowers in Chania"&gt;</b>
+   <br>
+   Alright, when you code or you insert exactly the above code into your text editor and run it will display a broken link icon and the alt text to you, this will happen because the <b class="tags">src</b> value thats the URL of the image can not be located. <br>
+   To correct this make sure you import an image into the folder you created on the your PC or inside your text editor on your Smartphone
+   and rename it to a name you can easily remember and make sure it ends with it's filename type (<b class="tags"> .png, .jpg, .jpeg</b> ) and so on and so forth.
+   <br>
+   After that, inside the <br><b class="tags">&lt;img src="img_chania.jpg" alt="Flowers in Chania"&gt;</b> <br>replace the <b class="tags">img_chania.jpg</b> with the name of the image you imported into your folder and run it and see.
+    </li>
+    <li class="il"><b class="subhead">The alt Attribute:</b> The required &lt;alt&gt; attribute provides an alternate text for an image, <br> if the user for some reason cannot view it (because of slow connection, an error in the &lt;src&gt; attribute, or if the user uses a screen reader). <br>
+
+The value of the &lt;alt&gt; attribute should describe the image: so in this case the user can then later search for the type image using the alternative text on another website or google for short. <br>
+<b class="eg">Eg:</b> 
+<b class="tags">&lt;img src="img_chania.jpg" alt="Flowers in Chania"&gt;</b>
+<br>
+With the above code when run and the browser cannot find the image due to error with the <b>src</b> value, it will display the value of the alt attribute: <br>
+<b class="note">Note:</b>A screen reader is a software program that reads the HTML code, and allows the user to "listen" to the content. <br>
+Screen readers are useful for people who are visually impaired or learning disabled.
+
+</li>
+  </ul>
+</fieldset>
+<b style="margin-top: 5px">Alright, when you insert an image into you web page without including any control to <br>
+the image, it will encourage the browser to apply the default contol to the image on the website. <br>
+So when this happened you can see that the size of the image is above, how you wants it to appear on the web page and will sometimes be bigger than the width size of the page. <br>
+To correct this from happening, this is where we're going to make use of some CSS codes which includes <b class="tags">Width and height</b> so simply putting <br>
+We now needs to control the width and height of the image using some CSS codes. <br>
+So let's check these CSS codes out.</b>
+<br>
+<fieldset id="relevant">
+  <legend><span class="relevant">Image Size - Width and Height</span></legend>
+  You can use the style attribute to specify the width and height of an image. <br>Let's  say we want to control the size of <b class="tags">&lt;img src="img_chania.jpg" alt="Flowers in Chania" &gt;</b><br>
+  <b class="eg">Eg:</b> <br>
+  <b class="tags">
+  &lt;img src="img_chania.jpg" alt="Flowers in Chania" style="width:50%; height:50%;"&gt;</b>
+  <br> But you can choose to use <b class="tags">Style="width:200px; height:100px"</b>
+  <b class="note"> Note: </b> <br>Always specify the width and height of an image.<br>
+  If width and height are not specified, the web page might flicker while the image loads.
+
+
+</fieldset> <br>
+
+</li>
+<p style="text-align: center; font-size: 115%; color: deepskyblue">Click the Button below <br> to take you to the Work space</p>
+<a href="#">
+<button id="button1"> Button </button>
+</a>
+<li><b class="points">*HTML LINKS* :</b> Links are found in nearly all web pages. Links allow users to click their way from page to page. <br>
+A link is the address to a document ( or resource ) located on the World Wide Web or elsewhere within your own web server. <br>
+Lets understand Links into details. <br>
+<b class="subhead">HTML Links - Hyperlinks :</b>
+HTML links are hyperlinks. <br>
+The HTML <b class="tags">&lt;a&gt;</b> tag defines a hyperlink.
+Alright, over here someone will be like, what is a <b class="tags">Hyperlinks</b> so let's check it out: <br>
+<fieldset id="relevant">
+  <legend class="relevant"><span>Hyperlinks</span></legend>
+  <b style="font-size: 110%">
+  A hyperlink is a word, phrase, or image that you can click on to jump to a new document or a new section within the current document. <br>
+  Hyperlinks are found in nearly all Web pages, allowing users to click their way from page to page. <br>
+  Text hyperlinks are often blue and underlined, but don't have to be. <br>
+  When you move the cursor over a hyperlink, whether it is text or an image, the arrow should change to a small hand pointing at the link. <br>
+  When you click it, a new page or place in the current page will open. <br>
+Hyperlinks, often referred to as just "links," are common in Web pages, but can be found in other hypertext documents. <br>
+These include certain encyclopedias, glossaries, dictionaries, and other references that use hyperlinks. <br>
+The links act the same way as they do on the Web, allowing the user to jump from page to page. Basically, hyperlinks allow people to browse information at hyperspeed.
+  </b>
+</fieldset >
+You can click on a link and jump to another document.
+
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+<br>
+<b class="note">Note:</b>  A link does not have to be a text. A link can be an image or any other HTML element! <br>
+Let's understand the syntax of the link tag <b class="tags">&lt;a&gt;</b> below: <br>
+<b class="eg">HTML Links - Syntax</b> <br>
+The  <b class="tags">&lt;a&gt;</b> tag has the following syntax. <br>
+<b class="tags">&lt;a href="url"&gt; </b>link text <b class="tags">&lt;/a&gt;</b> <br>
+The most important attribute of the <b class="tags">&lt;a&gt;</b> element is the <b class="tags">href</b> attribute, which indicates the link's destination. <br>
+
+The link text is the part that will be visible to the reader.
+Clicking on the link text, will send the reader to the specified URL address. <br>
+<b class="eg">Eg:</b> <br>
+By default, links will appear as follows in all browsers: <br>
+<b style="color: violet; font-size: 101%">
+An unvisited link is underlined and blue. <br>
+A visited link is underlined and purple. <br>
+An active link is underlined and red.
+</b>
+<br>
+<b class="note">Note:</b> <br>
+Links can of course be styled with CSS, to get another look! <br>
+Check the below Audio out: <br>
+  <audio controls >
+  <source src="links.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+<b class="eg">Eg:</b> <br>
+
+<b style="color: violet; font-size: 105%; text-align: center"> Below Is The Absolute URL </b> <br>
+
+<b class="tags">&lt;a href="https://www.google.com/"&gt;</b>Google <b class="tags">&lt;/a&gt;</b> <br>
+
+<b style="color: violet; font-size: 105%; text-align: center">Relative URLs</b> <br>
+<b class="tags">&lt;a href="html_images.asp"&gt;</b> HTML Images <b class="tags">&lt;/a&gt;</b> <br>
+
+</li>
+           </ul>
+      </fieldset>
+    
+		
+			</section>
+			<section style="">
+			  <hr width="80%" size="100%" style="border-radius: 20px 100px; margin-left: auto; margin-right: auto; display: block; background-image: url(last.png); background-repeat: no-repeat; background-size: 100%">
+      </section>
+
+  <script>
+    window.onload = function() {
+    var popup = document.getElementById('popup');
+    popup.classList.add('show');
+    
+    setTimeout(function() {
+        closePopup();
+    }, 5000);
+}
+
+function closePopup() {
+    var popup = document.getElementById('popup');
+    popup.classList.remove('show');
+}
+  </script>
+<script type="text/javascript">
+  let progress = document.getElementById('progressbar');
+  let totalHeight = document.body.scrollHeight - window.innerHeight;
+  Window.onscroll = function(){
+    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progress.style.height = progressHeight + "%";
+  }
+</script>
+<script>
+  const list = document.querySelectorAll('.list');
+
+  function activeLink() {
+    list.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
+  }
+  list.forEach((item) => item.addEventListener('click', activeLink));
+</script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script module src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	
+</body>
+</html>
